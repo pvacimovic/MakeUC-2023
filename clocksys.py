@@ -11,6 +11,7 @@ while(True):
     print(t)
     if((t.tm_hour == targetHour) and (targetMinute -1 == t.tm_min) and not activated):
         activated = 1
+        print("LIGHTS TURNING ON")
         pwm.lightingUp()
     
     
