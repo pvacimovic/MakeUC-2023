@@ -11,9 +11,9 @@ activated = 0
 target_timezone = pytz.timezone('US/Eastern')#('America/New_York')  # Replace with your desired timezone
 datetime.now(target_timezone)
 
-print(f'Target Hour - Target Minute: {targetHour}:{targetMinute} ')
+print(f'{target_timezone} Target Hour - Target Minute: {targetHour}:{targetMinute} ')
 while(True):
-    t = datetime.now()
+    t = datetime.now(target_timezone)
     print(f'Time:{int(t.hour)}:{t.minute}')
     sleep(.5)
     if((t.hour == targetHour) and (targetMinute -1 == t.minute) and not activated):
