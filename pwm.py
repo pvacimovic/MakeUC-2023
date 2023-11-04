@@ -12,6 +12,6 @@ ledFade.start(0)
 while True:
     t = time.localtime(time.time())
     dutyVal = (5/6)*(t.tm_sec)
-    print(dutyVal)
+    if (dutyVal%1 == 0): print(dutyVal)
     ledFade.ChangeDutyCycle(dutyVal)
-    sleep(0.05)
+    sleep(0.5)
