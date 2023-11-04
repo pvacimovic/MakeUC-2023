@@ -1,4 +1,6 @@
 import RPi.GPIO as GPIO
+import datetime
+import time
 from time import sleep
 
 led = 33
@@ -8,6 +10,6 @@ ledFade = GPIO.PWM(led, 1000)
 ledFade.start(0)
 
 while True:
-    for i in range(0,101, 5):
-        ledFade.ChangeDutyCycle(i)
-        sleep(0.05)
+    t = time.localtime(time.time())
+    ledFade.ChangeDutyCycle((5/3)*(t.tm_sec))
+    sleep(0.05)
