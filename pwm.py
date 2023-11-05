@@ -24,6 +24,13 @@ def lightingUp():
             ledFade.ChangeDutyCycle(dutyVal)
             sleep(1)
         sleep(wakeUpTime)
+
+        for i in range(wakeUpTime/2):
+            if(i%2==0):
+                dutyVal=100
+            else:
+                dutyVal=0
+            sleep(1)
         break
 if __name__ == '__main__':
     # test1.py executed as script
