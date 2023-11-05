@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-base = 31
+base = 33
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(base, GPIO.OUT)
